@@ -242,7 +242,8 @@ Ktrl = (function() {
 
   /**
    * [helper] 
-   */defines onReady function
+   * defines onReady function
+   */
   function ready (fn) {
     if (typeof fn !== 'function') {
       post("invalid handler function.");
