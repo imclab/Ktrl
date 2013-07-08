@@ -165,7 +165,7 @@ Ktrl = (function() {
   }
 
   /**
-   * route all sources to a target
+   * routes all sources to a target
    * @param  {object} target MIDI target
    * @return {boolean} result
    */
@@ -241,8 +241,8 @@ Ktrl = (function() {
   }
 
   /**
-   * [helper] defines onReady function
-   */
+   * [helper] 
+   */defines onReady function
   function ready (fn) {
     if (typeof fn !== 'function') {
       post("invalid handler function.");
