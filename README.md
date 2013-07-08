@@ -5,9 +5,11 @@ ktrl
 Ktrl.js is a JavaScript library that provides an abstract layer for all available MIDI input sources on the system and a convenient MIDI message routing system. It is built on top of Web MIDI API, which is currently available on the Chrome Canary build. (Version 30.0.1553.2 and beyond)
 
 ## Prerequisites
-1. MIDI controller(s)
+1. [MIDI controller(s)](https://www.google.com/search?q=MIDI+controller&source=lnms&tbm=isch&biw=1734&bih=1128&sei=q0fbUdlMwuWIArn1gfAJ)
+
 2. Chrome Canary build with Web MIDI flag enabled
-![Enabling MIDI API flag on Chrome Canary](/etc/chrome-flag.png "Enabling MIDI API flag on Chrome Canary")
+
+![Enabling MIDI API flag on Chrome Canary](etc/chrome-flag.png "Enabling MIDI API flag on Chrome Canary")
 
 ## How to use
 ```html
