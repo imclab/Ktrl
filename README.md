@@ -1,4 +1,4 @@
-ktrl
+Ktrl
 ====
 **JavaScript Library for Web MIDI API**
 
