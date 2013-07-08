@@ -7,6 +7,7 @@ Ktrl.js is a JavaScript library that provides an abstract layer for all availabl
 ## Prerequisites
 1. MIDI controller(s)
 2. Chrome Canary build with Web MIDI flag enabled
+![Enabling MIDI API flag on Chrome Canary](/etc/chrome-flag.png "Enabling MIDI API flag on Chrome Canary")
 
 ## How to use
 ```html
