@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello Ktrl!</h1>
+    <script src="https://hoch.github.com/Ktrl/Ktrl.js"></script>
+    <script>
+      var t = Ktrl.createTarget("mySynth");
+
+      t.onData(function (midimessage) {
+        var data = Ktrl.parse(midimessage);
+        console.log(t.label, data);
+      });
+
+      Ktrl.ready(function () {
+        Ktrl.report();
+        Ktrl.routeAllToTarget(t);
+        Ktrl.routeSourceToTarget(1, u);
+      });
+    </script>
+  </body>
+</html>
