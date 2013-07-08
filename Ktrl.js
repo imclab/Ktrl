@@ -176,11 +176,8 @@ Ktrl = (function() {
     }
     // connect all sources to the target
     sources.map(function (s) {
-        s.addTarget(target);
-      });
-    // for (var i = 0; i < sources.length; ++i) {
-    //   sources[i].addTarget(target);
-    // }
+      s.addTarget(target);
+    });
     return true;
   }
 
@@ -194,9 +191,6 @@ Ktrl = (function() {
     // check id first
     if (sourceId < sources.length && target.constructor.name === "MIDITarget") {
       // remove target from all sources
-      // for (var i = 0; i < sources.length; ++i) {
-      //   sources[i].removeTarget(target);
-      // }
       sources.map(function (s) {
         s.removeTarget(target);
       });
@@ -222,9 +216,6 @@ Ktrl = (function() {
     sources.map(function (s) {
       s.removeTarget(target);
     });
-    // for (var i = 0; i < sources.length; ++i) {
-    //   sources[i].removeTarget(target);
-    // }
     return true;
   }
 
@@ -243,12 +234,6 @@ Ktrl = (function() {
           targets.splice(idx, 1);
         }
       });
-      // for(var i = 0; i < targets.length; ++i) {
-      //   if (targets[i] === target) {
-      //     var t = targets.indexOf(target);
-      //     targets.splice(t, 1);
-      //   }
-      // }
       return true;
     } else {
       return false;
