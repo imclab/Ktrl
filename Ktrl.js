@@ -31,6 +31,7 @@
 
 /**
  * @namespace Ktrl
+ * @version r1
  * @author Hongchan Choi (hoch, hongchan@google.com)
  */
 Ktrl = (function() {
@@ -45,6 +46,8 @@ Ktrl = (function() {
   var onready = null;
   // system-ready flag
   var status = false;
+  // version
+  var version = "r1";
 
   /**
    * @class [internal] MIDI source (input port abstraction)
@@ -365,22 +368,22 @@ Ktrl = (function() {
   navigator.requestMIDIAccess().then(function (midiAccess) {
     // check input ports
     if (midiAccess.inputs().length === 0) {
-      console.log("[ktrl] no input ports available");
+      post("no input ports available");
       return;
     }
     // creating MIDI sources
     for(var i = 0; i < midiAccess.inputs().length; ++i) {
       sources[i] = new MIDISource(midiAccess.inputs()[i]);
     }
-    console.log("[ktrl] Ktrl is ready.");
+    post("Ktrl (" + version + ") is ready.");
     status = true;
     if (typeof onready === 'function') {
       onready();
     } else {
-      console.log("[ktrl] onReady is not specified.");
+      post("onReady is not specified.");
     }
   }, function (msg) {
-    console.log("[ktrl] failed to get MIDI access: " + msg);
+    post("failed to get MIDI access: " + msg);
     status = false;
     return;
   });
