@@ -149,7 +149,7 @@ bullseye.onData(function (midimessage) {
 
 # Demo
 
-- [Hello Ktrl!](examples/helloKtrl.html)
+- [Hello Ktrl!](https://hoch.github.com/Ktrl/examples/helloKtrl.html)
 
 # Related resources
 
