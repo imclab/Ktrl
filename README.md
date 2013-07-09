@@ -15,7 +15,7 @@ Ktrl (/kənˈtroʊl/) is a JavaScript library that provides an abstract layer fo
 
 ## How to use
 ```html
-<script src="https://hoch.github.com/Ktrl/src/Ktrl.js"></script>
+<script src="https://hoch.github.io/Ktrl/Ktrl.min.js"></script>
 ```
 
 ## Example usage
