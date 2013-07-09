@@ -170,10 +170,11 @@ Ktrl = (function() {
    * @return {boolean} result
    */
   function routeAllToTarget (target) {
-    if (target.constructor.name !== "MIDITarget") {
-      post("invalid argument. (must use MIDITarget)");
-      return false;
-    }
+    // NOTE: this won't work after closure compilation
+    // if (target.constructor.name !== "MIDITarget") {
+    //   post("invalid argument. (must use MIDITarget)");
+    //   return false;
+    // }
     // connect all sources to the target
     sources.map(function (s) {
       s.addTarget(target);
@@ -189,7 +190,7 @@ Ktrl = (function() {
    */
   function routeSourceToTarget (sourceId, target) {
     // check id first
-    if (sourceId < sources.length && target.constructor.name === "MIDITarget") {
+    if (sourceId < sources.length) {
       // remove target from all sources
       sources.map(function (s) {
         s.removeTarget(target);
@@ -209,10 +210,11 @@ Ktrl = (function() {
    * @return {boolean} result
    */
   function disconnectTarget (target) {
-    if (target.constructor.name !== "MIDITarget") {
-      post("invalid argument. (must use MIDITarget)");
-      return false;
-    }
+    // NOTE: this won't work after closure compilation
+    // if (target.constructor.name !== "MIDITarget") {
+    //   post("invalid argument. (must use MIDITarget)");
+    //   return false;
+    // }
     sources.map(function (s) {
       s.removeTarget(target);
     });
