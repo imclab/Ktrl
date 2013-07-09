@@ -30,6 +30,15 @@
 */
 
 /**
+ * safety check first
+ */
+(function() {
+  if (typeof navigator.requestMIDIAccess === "undefined") {
+    throw new Error("[Ktrl] your browser does not support Web MIDI API. Halt.");
+  }
+})();
+
+/**
  * @namespace Ktrl
  * @version r1
  * @author Hongchan Choi (hoch, hongchan@google.com)
