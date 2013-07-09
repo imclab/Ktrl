@@ -2,7 +2,11 @@ Ktrl
 ====
 **JavaScript Library for Web MIDI API**
 
-Ktrl (/kənˈtroʊl/) is a JavaScript library that provides an abstract layer for all available MIDI input sources on the system and a convenient MIDI message routing system. It is built on top of Web MIDI API, which is currently available on the Chrome Canary build. (Version 30.0.1553.2 and beyond)
+Ktrl (/kənˈtroʊl/) is a JavaScript library that provides an abstract layer for all available MIDI input sources on the system and a convenient MIDI message routing system. It is built on top of [Web MIDI API](http://webaudio.github.io/web-midi-api/), which is currently available on the Chrome Canary build. (Version 30.0.1553.2 and beyond)
+
+![Ktrl: How it works](etc/diagram.png "Ktrl: How it works")
+
+In short, if you have a MIDI device(s) connected to your machine, you can start write up a MIDI-powered web app by including this library on your web page. With all the technical chores hidden, it just gives you a stream of MIDI data as JSON.
 
 ## Prerequisites
 1. [MIDI controller(s)](https://www.google.com/search?q=MIDI+controller&source=lnms&tbm=isch&biw=1734&bih=1128&sei=q0fbUdlMwuWIArn1gfAJ)
