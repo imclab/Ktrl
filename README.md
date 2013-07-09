@@ -2,26 +2,27 @@ Ktrl
 ====
 **JavaScript Library for Web MIDI API**
 
-Ktrl is a JavaScript library that provides an abstract layer for all available MIDI input sources on the system and a convenient MIDI message routing system. It is built on top of Web MIDI API, which is currently available on the Chrome Canary build. (Version 30.0.1553.2 and beyond)
+Ktrl (/kənˈtroʊl/) is a JavaScript library that provides an abstract layer for all available MIDI input sources on the system and a convenient MIDI message routing system. It is built on top of Web MIDI API, which is currently available on the Chrome Canary build. (Version 30.0.1553.2 and beyond)
 
 ## Prerequisites
 1. [MIDI controller(s)](https://www.google.com/search?q=MIDI+controller&source=lnms&tbm=isch&biw=1734&bih=1128&sei=q0fbUdlMwuWIArn1gfAJ)
 
 2. Mac (at the moment. sorry.)
 
-3. Chrome Canary build with Web MIDI API flag enabled
+3. [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) build with Web MIDI API flag enabled
 
 ![Enabling MIDI API flag on Chrome Canary](etc/chrome-flag.png "Enabling MIDI API flag on Chrome Canary")
 
 ## How to use
 ```html
-<script src="https://github.com/hoch/ktrl/raw/master/ktrl.js"></script>
+<script src="https://hoch.github.com/Ktrl/Ktrl.js"></script>
 ```
 
 ## Example usage
 ```javascript
-// create MIDI target (i.e. a synth)
+// create and activate MIDI target (i.e. a synth)
 var t = Ktrl.createTarget("mySynth");
+t.activate();
 
 // define MIDI data handler
 t.onData(function (midimessage) {
@@ -29,13 +30,10 @@ t.onData(function (midimessage) {
   console.log(t.label, data);
 });
 
-// prepare MIDI API and route up
+// prepare MIDI system and route it up
 Ktrl.ready(function () {
   // route all MIDI inputs to the target
-  Ktrl.routeAllToTarget(t);
-  
-  // active target
-  t.activate();
+  Ktrl.routeAllToTarget(t);  
 });
 ```
 
@@ -59,7 +57,7 @@ reports available MIDI sources and targets.
 
 #### Ktrl.createTarget(label)
 
-creates a MIDI target with label.
+creates a MIDI target with a label.
 
 ```javascript
 var t = Ktrl.createTarget("mySynth");
